@@ -21,23 +21,14 @@ main{
 
 
 .main-content{
-    display: flex;
     width: 100%;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    /* in alternativa avrei potuto usare flex-direction: column */
+    height: 100%; 
 }
 
 .navbar{
+    width: 100%;
     height: 100px;
-    width: 100%;
     background-color: rgb(45, 45, 45);
-}
-
-.content{
-    height: calc(100% - 200px);
-    width: 100%;
-    background-color: red;
 }
 
 footer{
@@ -76,25 +67,23 @@ footer{
 
 /* --------------------------- sidebar ----------------------- */
 .sidebar{
-    height: calc(100% - 10vh);
+    height: calc(100% - 100px);
     width: 10%;
-    padding: 10px 20px;
+    padding: 0 20px;
     background-color: black;
     color: rgb(99, 99, 99);
-
 }
-
 .content-logo{
     width: 100%;
-    height: 10%;
-    border: 1px solid black;
+    height: 100px;
+    border: 1px solid red;
 }
 .content-logo img{
     width: 80%;
+    padding-top: 20px;
 }
 
 .search-playlist{
-    margin: 10px 0;
     position: relative;
 }
 .search-playlist ul li{
@@ -104,20 +93,36 @@ footer{
 }
 .search-playlist ul li a{
     text-decoration: none;
-    /* color: white; ricordarsi di cambiare il colore uando va in hover */
+    color: rgb(99, 99, 99);
+
 }
 .search-playlist .fas{
     position: absolute;
+    font-size: 30px;
 }
-.search-playlist span{
+.search-playlist .icon span{
+    margin-left: 40px;
+}
+
+.search-playlist .icon{
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+}
+.icon .fas{
+    font-size: 30px;
+}
+.add-playlist span{
     margin-left: 30px;
-    color: rgb(99, 99, 99);
 }
-.search-playlist i:hover,.search-playlist span:hover{
+
+
+.color-white:hover{
     color: white;
+    border-left: 1px solid greenyellow;
 }
 .search-playlist h4{
-    margin-bottom: 5px;
+    margin: 10px 0;
     color: white;
 }
 
@@ -134,19 +139,56 @@ footer{
     color: lightgray;   
 }
 .add-playlist span{
-    padding-left: 50px;
+    padding-left: 30px;
 }
 .search-playlist p{
     margin: 15px 0;
 }
 
 .link-utility{
-    height: 80vh;
+    height: calc(100% - 100px);
+    padding: 5px 0;
+    color: rgb(99, 99, 99);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.user hr{
+    margin: 10px 0;  
+}
+.name-user .fas.fa-user{
+    font-size: 28px;
+}
 
+.name-user{
+    height: 28px;    
+    line-height: 28px;
+    color: white;
+    font-weight: bold;
+}
 
+/* --------------------------- content ----------------------- */
 
+.content{
+    height: calc(100% - 100px);
+    width: 100%;
+    background-color: rgb(0, 15, 34);
+}
+.nav-content{
+    text-align: center;
+    height: 100px;
+    border: 1px solid black;
+}
+.nav-content ul{
+    height: 100px;
+    line-height: 100px;
+}
+.nav-content ul li{
+    display: inline-block;
+}
+.nav-content ul li a{
+    text-decoration: none;
+    color: rgb(99, 99, 99);
+    padding: 0 20px;
+}
