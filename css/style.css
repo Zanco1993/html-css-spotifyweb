@@ -23,7 +23,12 @@ main{
     height: calc(100% - 10vh);
     width: 10%;
     padding: 10px 20px;
-    background-color: blueviolet;
+    background-color: black;
+    color: rgb(99, 99, 99);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .main-content{
@@ -97,19 +102,25 @@ footer{
 .search ul li{
     list-style: none;
     margin-bottom: 10px;
+    
 }
 .search ul li a{
     text-decoration: none;
-    color: white; /* ricordarsi di cambiare il colore uando va in hover */
+    /* color: white; ricordarsi di cambiare il colore uando va in hover */
 }
 .search .fas{
     position: absolute;
 }
 .search span{
     margin-left: 30px;
+    color: rgb(99, 99, 99);
+}
+.search i:hover,.search span:hover{
+    color: white;
 }
 .playlist h4{
     margin-bottom: 5px;
+    color: white;
 }
 
 .add-playlist{
@@ -121,7 +132,8 @@ footer{
 }
 .fas.fa-plus-square{
     font-size: 50px;
-    position: absolute;    
+    position: absolute; 
+    color: lightgray;   
 }
 .add-playlist span{
     padding-left: 50px;
@@ -129,6 +141,8 @@ footer{
 .playlist p{
     margin: 15px 0;
 }
+
+
 
 
 
