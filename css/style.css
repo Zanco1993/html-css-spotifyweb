@@ -108,3 +108,27 @@ footer{
 .search span{
     margin-left: 30px;
 }
+.playlist h4{
+    margin-bottom: 5px;
+}
+
+.add-playlist{
+    border: 1px solid black;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+
+}
+.fas.fa-plus-square{
+    font-size: 50px;
+    position: absolute;    
+}
+.add-playlist span{
+    padding-left: 50px;
+}
+.playlist p{
+    margin: 15px 0;
+}
+
+
+
