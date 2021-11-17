@@ -12,6 +12,7 @@ body{
     height: 100vh;
     width: 100vw;
     background-color: aqua;
+    position: relative;
 }
 main{
     height: 100%;
@@ -26,17 +27,20 @@ main{
 
 .main-content{
     display: flex;
-    flex-direction: column;
     width: 85%;
+    flex-wrap: wrap;
+    /* in alternativa avrei potuto usare flex-direction: column */
 }
 
 .navbar{
     height: 20%;
+    width: 100%;
     background-color: chartreuse;
 }
 
 .content{
     height: 80%;
+    width: 100%;
     background-color: red;
 }
 
@@ -44,4 +48,7 @@ footer{
     width: 100%;
     height: 20%;
     background-color: lightgrey;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
