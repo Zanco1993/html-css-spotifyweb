@@ -303,10 +303,25 @@ footer .player-center{
 
 @media screen and (min-width:576px) and (max-width:1199px){
     
-    .container-album .info-track{
-       
+    .track-played{
+        width: calc(100% / 4 - 20px);
+
     }
 
+    
 
+}
+
+/* ---------------------media query mobile--------------------- */
+
+
+@media screen and (max-width:575px){
+    
+    .track-played{
+        width: calc(100% / 2 - 20px);
+
+    }
+
+    
 
 }
