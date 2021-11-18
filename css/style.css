@@ -10,19 +10,17 @@ body{
 
 .container{
     height: 100vh;
-    width: 100vw;
     background-color: aqua;
-    position: relative;
 }
 main{
-    height: 100%;
+    height: calc(100vh - 100px);
     display: flex;
 }
 
 
 .main-content{
-    width: 100%;
-    height: calc(100% - 100px);
+    width: calc(100% - 300px);
+    height: 100%;
     overflow-y: scroll;
 }
 
@@ -30,16 +28,14 @@ main{
     width: 100%;
     height: 100px;
     background-color: rgb(45, 45, 45);
+    position: relative;
 }
 
 footer{
     width: 100%;
     height: 100px;
     background-color: lightgrey;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
+   
 }
 
 .button{
@@ -62,111 +58,74 @@ footer{
     text-decoration: none;
 }
 .navbar{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: fixed;
+    width: calc(100% - 300px);
     
 }
+/* .login{
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
+
 
 /* --------------------------- sidebar ----------------------- */
 .sidebar{
-    height: calc(100% - 100px);
+    height: 100%;
     width: 300px;
-    padding: 0 20px;
     background-color: black;
     color: rgb(99, 99, 99);
 }
-.content-logo{
-    width: 100%;
-    height: 100px;
-}
-.content-logo img{
-    width: 80%;
-    padding-top: 10px;
-}
-
-.search-playlist{
-    position: relative;
-}
-.search-playlist ul li{
-    list-style: none;
-    margin-bottom: 10px;
-    
-}
-.search-playlist ul li a{
-    text-decoration: none;
-    color: rgb(99, 99, 99);
-
-}
-.search-playlist .fas{
-    position: absolute;
-    font-size: 30px;
-}
-.search-playlist .icon span{
-    margin-left: 40px;
-}
-
-.search-playlist .icon{
-    height: 30px;
-    line-height: 30px;
-    margin: 10px 0;
-}
-.icon .fas{
-    font-size: 30px;
-}
-.add-playlist span{
-    margin-left: 30px;
-}
-.color-white:hover{
-    color: white;
-    border-left: 1px solid greenyellow;
-}
-.search-playlist h4{
-    margin: 10px 0;
-    color: white;
-}
-
-.search-playlist .add-playlist{
-    border: 1px solid black;
-    height: 50px;
-    line-height: 50px;
-    position: relative;
-
-}
-.fas.fa-plus-square{
-    font-size: 50px;
-    position: absolute; 
-    color: lightgray;   
-}
-.add-playlist span{
-    padding-left: 30px;
-}
-.search-playlist p{
-    margin: 15px 0;
-}
-
-.link-utility{
-    height: calc(100% - 100px);
-    padding: 5px 0;
+.row-flex{
+    height: 100%;
+    padding: 5px 10px;
     color: rgb(99, 99, 99);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.user hr{
-    margin: 10px 0;  
+.link-utility ul{
+    list-style: none;
 }
-.name-user .fas.fa-user{
-    font-size: 28px;
+.search{
+    margin: 30px 0;
+}
+.content-logo{
+    width: 200px;
+}
+.content-logo img{
+    width: 100%;
 }
 
-.name-user{
-    height: 28px;    
-    line-height: 28px;
-    color: white;
-    font-weight: bold;
+.search ul li{
+    margin: 10px 0;
 }
+.search ul li img{
+    width: 30px;
+    vertical-align: middle;
+}
+.fas.fa-plus{
+    padding: 10px;
+    background-color: lightgray;
+}
+
+.playlist li{
+    margin: 15px 0;
+}
+
+.user .download-app{
+    width: 20px;
+    vertical-align: middle;
+}
+.profile .user{
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+
 
 /* --------------------------- main content ----------------------- */
 
@@ -176,6 +135,7 @@ footer{
 .content{
     width: 100%;
     background-color: rgb(0, 103, 238);
+    padding-top: 100px;
     
 }
 .nav-content{
@@ -217,14 +177,13 @@ footer{
     width: 100%;
     margin: 20px 0;
     display: flex;
-    flex-wrap: wrap;
 }
 
 .track-played{
     width: 200px;
     text-align: center;
     /* border: 1px solid black; */
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .track-played .icone-image {
     width: 200px;
