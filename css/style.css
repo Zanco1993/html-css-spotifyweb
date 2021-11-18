@@ -10,19 +10,13 @@ body{
 
 .container{
     height: 100vh;
-    background-color: aqua;
 }
+
 main{
     height: calc(100vh - 100px);
     display: flex;
 }
 
-
-.main-content{
-    width: calc(100% - 300px);
-    height: 100%;
-    overflow-y: scroll;
-}
 
 .navbar{
     width: 100%;
@@ -34,8 +28,8 @@ main{
 footer{
     width: 100%;
     height: 100px;
-    background-color: lightgrey;
-   
+    background-color: grey;
+    color: white; 
 }
 
 .button{
@@ -43,7 +37,7 @@ footer{
     border: 1px solid white;
     padding: 10px 25px;
     border-radius: 20px;
-
+    text-decoration: none;
 }
 
 /* --------------------------- utility ----------------------- */
@@ -62,12 +56,6 @@ footer{
     width: calc(100% - 300px);
     
 }
-/* .login{
-    position: absolute;
-    top: 0;
-    right: 0;
-} */
-
 
 /* --------------------------- sidebar ----------------------- */
 .sidebar{
@@ -76,7 +64,7 @@ footer{
     background-color: black;
     color: rgb(99, 99, 99);
 }
-.row-flex{
+.sidebar .row-flex{
     height: 100%;
     padding: 5px 10px;
     color: rgb(99, 99, 99);
@@ -129,30 +117,48 @@ footer{
 
 /* --------------------------- main content ----------------------- */
 
-/* --------------------------- nav-content ----------------------- */
+.main-content{
+    width: calc(100% - 300px);
+    height: 100%;
+}
+
+/* --------------------------- header ----------------------- */
+header{
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: fixed;
+}
+header a{
+    position: fixed;
+    top: 30px;
+    right: 0;
+}
+/* --------------------------- content ----------------------- */
 
 
 .content{
     width: 100%;
-    background-color: rgb(0, 103, 238);
+    height: 100%;
+    background-color:  #15181f;
     padding-top: 100px;
+    overflow: auto;
     
 }
 .nav-content{
     text-align: center;
-    height: 100px;
-    border: 1px solid black;
+    margin: 20px 0;
+    color: white;
 }
 .nav-content ul{
-    height: 100px;
-    line-height: 100px;
+    list-style: none;
 }
 .nav-content ul li{
     display: inline-block;
 }
 .nav-content ul li a{
     text-decoration: none;
-    color: rgb(99, 99, 99);
     padding: 0 20px;
 }
 .nav-content ul li a:hover{
@@ -163,35 +169,71 @@ footer{
 /* --------------------------- container-album ----------------------- */
 
 .container-album{
-    padding: 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
-.container-album p{
-    font-size: 12px;
-    margin-top: 10px;
-}
-.container-album h2{
+.recently-played, .create-for, .popular-artist{
     color: white;
 }
 
 .info-track{
-    width: 100%;
-    margin: 20px 0;
     display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
 .track-played{
-    width: 200px;
+    width: calc(100% / 7);
     text-align: center;
-    /* border: 1px solid black; */
     margin-right: 20px;
+    /* border: 1px solid black; */
 }
-.track-played .icone-image {
-    width: 200px;
-}
-.icon-image img{
+.track-played img{
     width: 100%;
 }
+
 .track-played h4{
     margin: 5px 0;
     color: white;
+}
+
+.container-album p{
+    font-size: 12px;
+    margin-top: 10px;
+    color: grey;
+}
+
+/* --------------------------- footer ----------------------- */
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+    color: white; 
+}
+
+footer .row-flex{
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+footer .player-left, footer .player-right{
+    width: 250px;
+    max-width: calc(100% / 3);
+    height: 100%;
+    border: 1px solid red;
+}
+
+footer .player-center{
+    width: calc(100% - 500px);
+    flex-grow: 1;
+    background-color: yellow;
+    height: 100%;
+}
+
+.player-center .play-track{
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: orange;
 }
