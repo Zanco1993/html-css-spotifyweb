@@ -30,6 +30,8 @@ footer{
     height: 100px;
     background-color: grey;
     color: white; 
+    position: fixed;
+    z-index: 10;
 }
 
 .button{
@@ -136,11 +138,13 @@ header{
     background-color: black;
     color: white;
     position: fixed;
+    z-index: 1001;
 }
 header a{
     position: fixed;
     top: 30px;
     right: 0;
+    z-index: 1001;
 }
 /* --------------------------- content ----------------------- */
 
@@ -191,7 +195,7 @@ header a{
 }
 
 .track-played{
-    width: calc(100% / 7);
+    width: calc(100% / 6 - 20px);
     text-align: center;
     margin-right: 20px;
     /* border: 1px solid black; */
@@ -292,4 +296,17 @@ footer .player-center{
 
 .player-right i{
     margin-right: 15px;
+}
+
+
+/* ---------------------media query tablet--------------------- */
+
+@media screen and (min-width:576px) and (max-width:1199px){
+    
+    .container-album .info-track{
+       
+    }
+
+
+
 }
