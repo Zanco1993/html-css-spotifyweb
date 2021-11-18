@@ -113,6 +113,13 @@ footer{
     vertical-align: middle;
 }
 
+.user hr{
+    margin: 10px 0;
+}
+.download img, .profile img{
+    margin-right: 10px;
+}
+
 
 
 /* --------------------------- main content ----------------------- */
@@ -160,6 +167,7 @@ header a{
 .nav-content ul li a{
     text-decoration: none;
     padding: 0 20px;
+    color: grey;
 }
 .nav-content ul li a:hover{
     color: white;
@@ -215,6 +223,7 @@ footer .row-flex{
     width: 100%;
     height: 100px;
     display: flex;
+    align-items: center;
 }
 
 footer .player-left, footer .player-right{
@@ -222,6 +231,16 @@ footer .player-left, footer .player-right{
     max-width: calc(100% / 3);
     height: 100%;
     border: 1px solid red;
+}
+
+footer .player-left{
+    display: flex;
+    align-items: center;
+}
+
+.player-left img{
+    width: 70px;
+    object-fit: cover;
 }
 
 footer .player-center{
@@ -236,4 +255,39 @@ footer .player-center{
     height: 100px;
     margin: 0 auto;
     background-color: orange;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.play-track .play-top, .play-track .play-down{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.play-top i{
+    font-size: 25px;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.play-track .time{
+    font-size: 13px;
+    margin: 0 15px;
+}
+
+.play-down input{
+    width: 50%;
+    vertical-align: middle;
+}
+
+.player-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-right i{
+    margin-right: 15px;
 }
