@@ -55,14 +55,14 @@ footer{
 }
 .navbar{
     position: fixed;
-    width: calc(100% - 300px);
+    width: calc(100% - 200px);
     
 }
 
 /* --------------------------- sidebar ----------------------- */
 .sidebar{
     height: 100%;
-    width: 250px;
+    width: 200px;
     background-color: black;
     color: rgb(99, 99, 99);
 }
@@ -83,6 +83,10 @@ footer{
     width: 100%;
 }
 
+.content-logo-mobile{
+    display: none;
+}
+
 .sidebar-top ul{
     list-style: none;
 }
@@ -101,6 +105,10 @@ footer{
 .sidebar-top .fas.fa-plus{
     background-color: grey;
     padding: 10px;
+}
+
+.sidebar-top ul li span{
+    padding-left: 10px;
 }
 
 .playlist-scroll {
@@ -136,32 +144,31 @@ footer{
 /* --------------------------- main content ----------------------- */
 
 .main-content{
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
     height: 100%;
 }
 
 /* --------------------------- header ----------------------- */
 header{
     height: 100px;
-    width: 100%;
+    width: calc(100% - 215px);
     background-color: black;
-    color: white;
     position: fixed;
     z-index: 1001;
 }
+
 header a{
     position: fixed;
     top: 30px;
-    right: 0;
+    right: 20px;
     z-index: 1001;
 }
 /* --------------------------- content ----------------------- */
 
-
 .content{
     width: 100%;
     height: 100%;
-    background-color:  #15181f;
+    background-color:#15181f;
     padding-top: 100px;
     overflow: auto;
     
@@ -169,7 +176,7 @@ header a{
 .nav-content{
     text-align: center;
     margin: 20px 0;
-    color: white;
+    height: 50px;
 }
 .nav-content ul{
     list-style: none;
@@ -207,6 +214,7 @@ header a{
     width: calc(100% / 6 - 20px);
     text-align: center;
     margin-right: 20px;
+    margin-bottom: 20px;
     /* border: 1px solid black; */
 }
 .track-played img{
@@ -226,18 +234,17 @@ header a{
 
 /* --------------------------- footer ----------------------- */
 footer{
-    width: 100%;
     height: 100px;
     background-color: grey;
     color: white; 
+    padding: 5px;
 }
 
 footer .row-flex{
-    width: 100%;
-    height: 100px;
-    padding: 5px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 footer .player-left, footer .player-right{
@@ -266,36 +273,36 @@ footer .player-center{
     height: 100%;
 }
 
-.player-center .play-track{
+.player-center .play-track-flex{
     width: 80%;
-    height: 100px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
 }
-.play-track .play-top, .play-track .play-down{
-    height: 50px;
+.play-track-flex .play-top, .play-track-flex .play-bottom{
+    height: 50%;
     width: 100%;
     text-align: center;
-    line-height: 50px;
 }
 
 .play-top i{
-    font-size: 25px;
+    font-size: 15px;
     vertical-align: middle;
-    margin: 0 10px;
+    padding: 0 10px;
 }
 
-.play-track .time{
+.play-track-flex .time{
     font-size: 13px;
     margin: 0 15px;
 }
 
-.play-down input{
-    width: 50%;
+.play-bottom input{
+    width: 70%;
     vertical-align: middle;
 }
+
 
 .player-right{
     display: flex;
@@ -314,10 +321,12 @@ footer .player-center{
     
     .track-played{
         width: calc(100% / 4 - 20px);
-
     }
 
-    
+    .sidebar-top .content-logo-mobile{
+        display: none;
+    }
+       
 
 }
 
@@ -326,11 +335,55 @@ footer .player-center{
 
 @media screen and (max-width:575px){
     
-    .track-played{
-        width: calc(100% / 2 - 20px);
-
+    header{
+        width: calc(100% - 57px)
     }
 
-    
 
+    .track-played{
+        width: calc(100% / 2 - 20px);
+    }
+
+    .sidebar-top .content-logo{
+        display: none;
+    }
+
+    .sidebar-top .content-logo-mobile{
+        display: block;
+        width: 30px;
+    }
+
+    .sidebar-top span,.sidebar-top h4,.fas.fa-plus{
+        display: none;
+    }
+
+    .sidebar-bottom span,hr{
+        display: none;
+    }
+
+    .playlist-scroll{
+        display: none;
+    }
+
+    .row-flex{
+        justify-content: space-between;
+    }
+    
+    .sidebar{
+        width: 50px;
+    }
+
+    .navbar{
+        width: calc(100% - 50px);  
+    }
+
+    .main-content{
+        width: calc(100% - 50px);
+    }
+
+    .nav-content li, .track-played h4{
+        font-size: 13px;
+    }
+
+   
 }
