@@ -275,9 +275,10 @@ footer .player-center{
 }
 
 .player-center .play-track-flex{
-    width: 80%;
+    /* width: 80%; */
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -292,7 +293,7 @@ footer .player-center{
 
 .play-top i{
     vertical-align: middle;
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 .play-track-flex .time{
@@ -309,11 +310,14 @@ footer .player-center{
 .player-right{
     display: flex;
     align-items: center;
-    justify-content: center;
+    
+}
+.player-right input{
+    width: 50%;
 }
 
 .player-right i{
-    margin-right: 15px;
+    padding-right: 10px;
 }
 
 
@@ -409,5 +413,15 @@ footer .player-center{
     .play-bottom .time{
         font-size: 10px;
     }
-   
+
+    .play-track-flex .play-top{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;  
+        align-items: center; 
+        
+    }
+    
+  
 }
