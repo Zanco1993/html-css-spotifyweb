@@ -62,7 +62,7 @@ footer{
 /* --------------------------- sidebar ----------------------- */
 .sidebar{
     height: 100%;
-    width: 300px;
+    width: 250px;
     background-color: black;
     color: rgb(99, 99, 99);
 }
@@ -72,39 +72,48 @@ footer{
     color: rgb(99, 99, 99);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    overflow: hidden;
 }
 
-.link-utility ul{
-    list-style: none;
-}
-.search{
-    margin: 30px 0;
-}
 .content-logo{
-    width: 200px;
+    width: 150px;
+    margin: 25px 0;
 }
 .content-logo img{
     width: 100%;
 }
 
-.search ul li{
+.sidebar-top ul{
+    list-style: none;
+}
+
+.sidebar-top ul li{
     margin: 10px 0;
 }
-.search ul li img{
+.sidebar-top ul li img{
     width: 30px;
     vertical-align: middle;
 }
-.fas.fa-plus{
+
+.sidebar-top h4{
+    color: white;
+}
+.sidebar-top .fas.fa-plus{
+    background-color: grey;
     padding: 10px;
-    background-color: lightgray;
 }
 
-.playlist li{
+.playlist-scroll {
+    flex-grow: 1;
+    min-height: 150px;
+    overflow-y: auto;
+}
+
+.playlist-scroll li{
     margin: 15px 0;
 }
 
-.user .download-app{
+.sidebar-bottom .download-app{
     width: 20px;
     vertical-align: middle;
 }
@@ -115,7 +124,7 @@ footer{
     vertical-align: middle;
 }
 
-.user hr{
+.sidebar-bottom hr{
     margin: 10px 0;
 }
 .download img, .profile img{
@@ -127,7 +136,7 @@ footer{
 /* --------------------------- main content ----------------------- */
 
 .main-content{
-    width: calc(100% - 300px);
+    width: calc(100% - 250px);
     height: 100%;
 }
 
