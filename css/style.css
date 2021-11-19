@@ -215,10 +215,15 @@ header a{
     text-align: center;
     margin-right: 20px;
     margin-bottom: 20px;
+    position: relative;
     /* border: 1px solid black; */
 }
 .track-played img{
     width: 100%;
+}
+.track-played img:hover{
+    filter: brightness(50%);
+ 
 }
 
 .track-played h4{
