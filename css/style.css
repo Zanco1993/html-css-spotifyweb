@@ -13,7 +13,7 @@ body{
 }
 
 main{
-    height: calc(100vh - 100px);
+    height: calc(100vh - 50px);
     display: flex;
 }
 
@@ -150,7 +150,7 @@ footer{
 
 /* --------------------------- header ----------------------- */
 header{
-    height: 100px;
+    height: 50px;
     width: calc(100% - 215px);
     background-color: black;
     position: fixed;
@@ -159,7 +159,7 @@ header{
 
 header a{
     position: fixed;
-    top: 30px;
+    top: 10px;
     right: 20px;
     z-index: 1001;
 }
@@ -234,7 +234,8 @@ header a{
 
 /* --------------------------- footer ----------------------- */
 footer{
-    height: 100px;
+    height: 50px;
+    width: 100%;
     background-color: grey;
     color: white; 
     padding: 5px;
@@ -248,7 +249,7 @@ footer .row-flex{
 }
 
 footer .player-left, footer .player-right{
-    width: 250px;
+    width: 200px;
     max-width: calc(100% / 3);
     height: 100%;
 }
@@ -259,16 +260,16 @@ footer .player-left{
     justify-content: space-between;
 }
 .player-left .name-song{
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 .player-left img{
-    width: 70px;
+    width: 25%;
     object-fit: cover;
 }
 
 footer .player-center{
-    width: calc(100% - 500px);
+    width: calc(100% - 400px);
     flex-grow: 1;
     height: 100%;
 }
@@ -284,13 +285,14 @@ footer .player-center{
 .play-track-flex .play-top, .play-track-flex .play-bottom{
     height: 50%;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
 }
 
 .play-top i{
-    font-size: 15px;
     vertical-align: middle;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .play-track-flex .time{
@@ -326,8 +328,19 @@ footer .player-center{
     .sidebar-top .content-logo-mobile{
         display: none;
     }
-       
 
+    footer i, footer span{
+        font-size: 10px;  
+    }
+
+    .player-left .name-song{
+        font-size: 10px;
+    }
+
+    .play-bottom .time{
+        font-size: 10px;
+    }
+   
 }
 
 /* ---------------------media query mobile--------------------- */
@@ -384,6 +397,17 @@ footer .player-center{
     .nav-content li, .track-played h4{
         font-size: 13px;
     }
+  
+    footer i{
+        font-size: 10px;  
+    }
 
+    .player-left .name-song{
+        font-size: 10px;
+    }
+
+    .play-bottom .time{
+        font-size: 10px;
+    }
    
 }
