@@ -233,16 +233,35 @@ header a:hover{
     text-align: center;
     margin-right: 20px;
     margin-bottom: 20px;
-    position: relative;
+    
     /* border: 1px solid black; */
 }
-.track-played img{
+.track-played .content-image img{
     width: 100%;
 }
-.track-played img:hover{
-    filter: brightness(50%);
- 
+
+.track-played .content-image img:hover{
+    filter: brightness(50%); 
 }
+
+.track-played .content-image{
+    position: relative;
+}
+
+.track-played .content-image i{
+    display: none;
+}
+
+.track-played .content-image:hover i{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+}
+
 
 .track-played h4{
     margin: 5px 0;
